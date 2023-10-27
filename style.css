@@ -63,12 +63,6 @@ header{
 
 
 
-/* Style the main content area */
-main {
-    margin: 20px;
-    padding: 20px;
-}
-
 /* Style the sections */
 section {
     background-color: #fff;
@@ -90,15 +84,19 @@ footer {
     font-weight: 900;
     color:white;
     text-align: center;
-    font-size: 23px;
-}
-
-.banner p {
-    font-size: 18px;
+    font-size: 33px;
 }
 
 .banner-content p{
-    font-size: 25px;
+    color:rgba(255, 255, 255, 0.85);
+}
+
+.banner{
+    background-image: url("banner_c.jpg");
+    background-size: cover;
+    background-position: center center; /* Adjust as needed */
+    background-repeat: no-repeat;
+    padding: 5%;
 }
 
 /* Add more styles and customizations as needed */
