@@ -1,2 +1,2 @@
-# scja
+# SJCA Website
 SJCA Website Repository
