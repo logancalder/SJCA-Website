@@ -1,0 +1,104 @@
+/* 
+Style file for SJCA HTML site. Contains all styling for all pages of SJCA.
+
+File 2 of 2: style.css
+
+Author: Logan C. | 10.27.23 */
+
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    cursor: default;
+    font-family: "Montserrat", sans-serif;
+    font-weight:500;
+    font-size:16px;
+    background-color: #eeeeee;
+    text-decoration:none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav bar */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 4%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.logo{
+    cursor: pointer;
+    max-height:50px;
+}
+
+.nav{
+    list-style: none;
+}
+
+.nav li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav li a{
+    color: white;
+    text-decoration:none;
+}
+
+.nav li a:hover{
+    transition: all .3s ease 0s;
+    color:rgb(255, 221, 148);
+}
+
+
+
+/* Style the main content area */
+main {
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Style the sections */
+section {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style the footer */
+footer {
+    color: #3d3d3d;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style the banner title and description */
+.banner-content {
+    margin: 30px;
+    font-weight: 900;
+    color:white;
+    text-align: center;
+    font-size: 23px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+.banner-content p{
+    font-size: 25px;
+}
+
+/* Add more styles and customizations as needed */
