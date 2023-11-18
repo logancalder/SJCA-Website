@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Jose Christian Assembly</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+
+        if(window.scrollY > 0){
+            header.classList.add('scrolled');
+        } else{
+            header.classList.remove('scrolled');
+        }
+    })
+</script>
+
+<body class = "english">
+    <section class = "header">
+        <img class = "logo" src = "images/logo.png" alt = "logo">
+        <nav class = "nav">
+            <ul>
+                <li class = "nav-button"><a href="#">Home</a></li>
+                <li class = "nav-button"><a href="#">About <i class="fa-solid fa-caret-down"></i></a></li>
+                <li class = "nav-button"><a href="#">Ministries <i class="fa-solid fa-caret-down"></i></a></li>
+                <li class = "give-button"><a href = "#">Give</a></li>
+                <li class = "lang-button"><a href = "../zh/home.html">中文</a></li>
+            </ul>
+        </nav>
+    </section>
+    
+    <section class = "banner">
+        <div class = "banner-content">
+            <h1>San Jose Christian Assembly</h1>
+            <p class = "zh">欢 迎 光 临</p>
+        </div>
+    </section>
+    
+        <section class = "intro">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p class = "medium">Vulputate ut pharetra sit amet aliquam</p>
+            <p>“My command is this: Love each other as I have loved you. Greater love has no one than this: to lay down one’s life for one’s friends.”</p>
+            <p class = "verse">John 15:12-13</p>
+        </section>
+
+        <div class="scroll-container">
+            <img src="images/img_5terre.jpg" alt="Cinque Terre">
+            <img src="images/img_forest.jpg" alt="Forest">
+            <img src="images/img_lights.jpg" alt="Northern Lights">
+            <img src="images/img_mountains.jpg" alt="Mountains">
+            <img src="images/img_5terre.jpg" alt="Cinque Terre">
+            <img src="images/img_forest.jpg" alt="Forest">
+            <img src="images/img_lights.jpg" alt="Northern Lights">
+            <img src="images/img_mountains.jpg" alt="Mountains">
+          </div>
+        <section class = "gray">
+            <img src="images/img_5terre.jpg" alt="Cinque Terre">
+            <figcaption>
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </figcaption>
+        </section>
+        
+        <section class = "white">
+            <img src="images/img_5terre.jpg" alt="Cinque Terre">
+            <figcaption>
+                <h2>Why Give</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </figcaption>
+        </section>
+    
+    <footer>
+        <p>&copy; Copyright 2014 San Jose Christian Assembly | 215 Topaz Street Milpitas, CA 95035 | 408-945-1095</p>
+    </footer>
+</body>
