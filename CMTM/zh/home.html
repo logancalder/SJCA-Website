@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+    
+<head>
+    <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - CMTM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="icon" href="../images/LOGO_Stone.png" type="image/x-icon">
+</head>
+
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+
+        if(window.scrollY > 0){
+            header.classList.add('scrolled');
+        } else{
+            header.classList.remove('scrolled');
+        }
+    })
+</script>
+
+<body class = "english">
+    <section class = "header">
+        <img class = "logo" src = "../images/LOGO_Stone.png" alt = "logo">
+        <nav class = "nav">
+            <ul>
+                <li class = "nav-button"><a href="#">首页</a></li>
+                <li class = "about-button"><a href = "about.html" id = "selected">关于我们</a></li>
+                <li class = "contact-button"><a href = "contact.html">联系</a></li>
+                <li class = "lang-button"><a href = "../en/home.html">English</a></li>
+            </ul>
+        </nav>
+    </section>
+    
+    <section class = "banner">
+        <div class = "banner-content">
+            <h1>Christian Ministry Training Mission</h1>
+            <p class = "zh">欢 迎 光 临</p>
+        </div>
+    </section>
+    
+        <section class = "intro">
+            <h2>分享福音与上帝的爱</h2>
+            <p class = "medium">在地球上传播主的话</p>
+            <p>"这是我的命令，叫你们彼此相爱，像我爱了你们一样。人为朋友舍命，人的爱心没有比这个大的。"</p>
+            <p class = "verse">约翰福音 15:12-13</p>
+        </section>
+
+        <div class="scroll-container">
+            <!-- Crop to be same as prior -->
+            <img src="../images/img037.jpg"> 
+            <img src="../images/img030.jpg">
+            <img src="../images/img031.jpg">
+            <img src="../images/img034.jpg">
+            <img src="../images/img037.jpg"> 
+            <img src="../images/img030.jpg">
+            <img src="../images/img031.jpg">
+            <img src="../images/img034.jpg">
+          </div>
+        <section class = "gray">
+            <img src="../images/img032.jpg">
+            <figcaption>
+                <h2>关于我们</h2>
+                <p>Christian Ministry Training Mission(CMTM) 成立於2004年。宗旨為以美國為中心，在各地栽培訓練合適的工人，使福音傳到之處，建立教會，牧養教會，在每一個地方帶進神的國度。
+                </p>
+            </figcaption>
+        </section>
+        
+        <section class = "white">
+            <img src="../images/img035.jpg">
+            <figcaption>
+                <h2>成立後主要的工作</h2>
+                <p>
+                1. 先後在China, Philippines, Malaysia, Taiwan, Ethiopia, 等地訓練宣教士，將福音傳到福音還未普及的地域。 <br><br>
+                2. 當信主人數穩固後，支持，訓練傳道人建立教會。<br><br>
+                3. 教會建立後，著重於持續栽培訓練教會中的事奉人員，使教會能繼續不斷的產生健康良好的下一代。
+            </p>
+            </figcaption>
+        </section>
+    
+    <footer>
+        <p>&copy; Copyright 2024 Christian Ministry Training Mission | 211 Topaz Street Milpitas, CA 95035 | 925-505-8646</p>
+    </footer>
+</body>

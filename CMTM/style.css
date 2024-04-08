@@ -1,0 +1,612 @@
+/* 
+Style file for SJCA HTML site. Contains all styling for all pages of SJCA.
+
+File 2 of 2: ../style.css
+
+Author: Logan C. | 10.27.23 */
+
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Zhi+Mang+Xing&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --main-color: #fba92e;
+    --highlight-color: rgb(255, 209, 110);
+}
+
+/* Body styles */
+
+body {
+    cursor: default;
+    font-family: "Montserrat", sans-serif;
+    font-weight:500;
+    font-size:16px;
+    background-color: #eeeeee;
+    text-decoration:none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav bar */
+
+.header,.about-header{
+    z-index: 10;
+    display: block;
+    position:fixed;
+    width:100%;
+    letter-spacing:.05em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 4%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.about-header{
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.header.scrolled{
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.black-border{
+    z-index: 10;
+    display: block;
+    width:100%;
+    letter-spacing:.05em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.zh{
+    font-family: 'Ma Shan Zheng', cursive;
+}
+
+.logo{
+    cursor: pointer;
+    max-height:70px;
+}
+
+/* Nav bar */
+
+.nav{
+    list-style: none;
+}
+
+.nav li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav li a{
+    color: white;
+    text-decoration:none;
+}
+
+.nav-button a:hover, .lang-button a:hover, .about-button a:hover, .contact-button a:hover{
+    transition: all .5s ease 0s;
+    color:rgb(255, 221, 148);
+}
+
+.lang-button{
+    letter-spacing:0em;
+}
+
+#selected{
+    font-weight: bold;
+}
+
+/* Style the sections */
+
+.white, .gray, .intro, .about{
+    padding: 40px;
+}
+
+.white p, .gray p, .intro p, .about p, .contact p {
+    margin: auto;
+    margin-top:15px;
+    margin-bottom:15px;
+    max-width: 45%;
+    line-height:1.5em;
+}
+
+.about p {
+    max-width: 85%;
+}
+
+.white h2, .gray h2, .intro h2, .about h2{
+    padding-top:10px;
+    padding-bottom:15px;
+    font-size:40px;
+}
+
+.white, .intro, .about, .contact {
+    background-color: #fff;
+}
+
+.intro{
+    text-align: center;
+}
+
+/* White section formatting */
+
+.white{
+    text-align:right;
+    display:flex;
+}
+
+.white h2{
+    margin-right:30px;
+}
+
+.white p{
+    margin-right:30px;
+    max-width: 75%;
+}
+
+.white img{
+    height:275px;
+    width:auto;
+    margin-left:30px;
+    border-radius:10px;
+}
+
+/* Gray section formatting */
+
+.gray{
+    text-align:left;
+    flex-direction: row-reverse;
+    display:flex;
+}
+
+.gray h2{
+    margin-left:30px;
+}
+
+.gray p{
+    margin-left:30px;
+    max-width: 75%;
+}
+
+.gray img{
+    height:275px;
+    width:auto;
+    margin-right:30px;
+    border-radius:10px;
+}
+
+/* Intro formatting */
+
+.intro h2{
+    padding-top:15px;
+    padding-bottom:0px;
+    font-size:40px;
+}
+
+.intro p{
+    padding-top:0px;
+    color:#3d3d3d;
+}
+
+.verse{
+    margin: auto;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.medium{
+    font-size:25px;
+    padding:0px;
+}
+
+/* Style the footer */
+
+footer {
+    color: #3d3d3d;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the banner title and description */
+
+.banner-content {
+    letter-spacing:-.08em;
+    opacity:100%;
+    margin: 30px;
+    color:white;
+    font-weight: 100;
+    text-align: center;
+    font-size: 33px;
+}
+
+.banner-content p{
+    margin:auto;
+    padding-top:25px;
+    letter-spacing:.4em;
+    color:rgba(255, 255, 255, .85);
+}
+
+.banner{
+    background-image: url("images/banner.png"); /* Should edit a pic in PS and lower the brightness */
+    background-size: cover;
+    background-position: center center; /* Adjust as needed */
+    background-repeat: no-repeat;
+    padding: 6%;
+}
+
+/* Scrolling image gallery */
+
+div.scroll-container {
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
+    width:100%;
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+    height:300px;
+    width:auto;
+    left: 0;
+    object-fit: cover;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    animation: scroll 20s linear infinite;;
+  }
+
+  @keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-405%);
+    }
+  }
+
+/* Style the banner title and description */
+
+  /* Mobile styles */
+@media (max-width: 767px) {
+   /* Nav bar */
+    
+   .header{
+    z-index: 10;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 4%;
+}
+
+.logo{
+    max-height:70px;
+}
+
+/* Nav bar */
+
+.nav{
+    list-style: none;
+}
+
+.nav li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+/* Style the sections */
+
+.white, .gray, .intro {
+    padding: 40px;
+    display:block;
+}
+
+.white p, .gray p, .intro p {
+    margin: auto;
+    margin-top:25px;
+    margin-bottom:15px;
+    max-width: 85%;
+    line-height:1.5em;
+    margin:auto;
+}
+
+.white h2, .gray h2, .intro h2{
+    padding-top:20px;
+    padding-bottom:15px;
+    font-size:40px;
+    margin:auto;
+}
+
+.intro{
+    text-align: center;
+}
+
+/* White section formatting */
+
+.white{
+    text-align:center;
+}
+
+.white p{
+    max-width: 75%;
+}
+
+.white img{
+    height:250px;
+    width:auto;
+    border-radius:10px;
+    margin:auto;
+}
+
+/* Gray section formatting */
+
+.gray{
+    text-align:center;
+}
+
+.gray p{
+    max-width: 75%;
+}
+
+.gray img{
+    height:250px;
+    width:auto;
+    border-radius:10px;
+    margin:auto;
+}
+
+/* Intro formatting */
+
+.intro h2{
+    padding-top:15px;
+    padding-bottom:0px;
+    font-size:40px;
+}
+
+.intro p{
+    padding-top:0px;
+}
+
+.verse{
+    margin: auto;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.medium{
+    font-size:25px;
+    padding:0px;
+}
+
+/* Style the footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+#first {
+    padding-top:20px;
+}
+
+/* Style the banner title and description */
+
+.banner-content {
+    margin: 30px;
+    margin-top:90px;
+    font-weight: 100;
+    text-align: center;
+    font-size: 33px;
+}
+
+.banner-content p{
+    margin:auto;
+    padding-top:25px;
+}
+
+/* Scrolling image gallery */
+
+div.scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
+    width:100%;
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+    height:300px;
+    width:auto;
+    left: 0;
+    object-fit: cover;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    animation: scroll 20s linear infinite;;
+  }
+ }
+ 
+ /* Tablet styles */
+ @media (min-width: 768px) and (max-width: 991px) {
+    /* Your tablet styles here */
+ }
+ 
+ /* Desktop styles */
+ @media (min-width: 992px) {
+
+    /* Nav bar */
+    
+    .header{
+        z-index: 10;
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 4%;
+    }
+    
+    .logo{
+        max-height:70px;
+    }
+    
+    /* Nav bar */
+    
+    .nav{
+        list-style: none;
+    }
+    
+    .nav li{
+        display: inline-block;
+        padding: 0px 20px;
+    }
+    
+    /* Style the sections */
+    
+    .white, .gray, .intro {
+        padding: 40px;
+    }
+    
+    .white p, .gray p, .intro p {
+        margin: auto;
+        margin-top:15px;
+        margin-bottom:15px;
+        max-width: 45%;
+        line-height:1.5em;
+    }
+    
+    .white h2, .gray h2, .intro h2{
+        padding-top:10px;
+        padding-bottom:15px;
+        font-size:40px;
+    }
+    
+    .intro{
+        text-align: center;
+    }
+    
+    /* White section formatting */
+    
+    .white{
+        text-align:right;
+        display:flex;
+    }
+    
+    .white h2{
+        margin-right:30px;
+    }
+    
+    .white p{
+        margin-right:30px;
+        max-width: 75%;
+    }
+    
+    .white img{
+        height:275px;
+        width:auto;
+        margin-left:30px;
+        border-radius:10px;
+    }
+    
+    /* Gray section formatting */
+    
+    .gray{
+        text-align:left;
+        flex-direction: row-reverse;
+        display:flex;
+    }
+    
+    .gray h2{
+        margin-left:30px;
+    }
+    
+    .gray p{
+        margin-left:30px;
+        max-width: 75%;
+    }
+    
+    .gray img{
+        height:275px;
+        width:auto;
+        margin-right:30px;
+        border-radius:10px;
+    }
+    
+    /* Intro formatting */
+    
+    .intro h2{
+        padding-top:15px;
+        padding-bottom:0px;
+        font-size:40px;
+    }
+    
+    .intro p{
+        padding-top:0px;
+    }
+    
+    .verse{
+        margin: auto;
+        margin-top:0px;
+        margin-bottom:0px;
+    }
+    
+    .medium{
+        font-size:25px;
+        padding:0px;
+    }
+    
+    /* Style the footer */
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    /* Style the banner title and description */
+    
+    .banner-content {
+        margin: 30px;
+        font-weight: 100;
+        text-align: center;
+        font-size: 33px;
+    }
+    
+    .banner-content p{
+        margin:auto;
+        padding-top:25px;
+    }
+    
+    /* Scrolling image gallery */
+    
+    div.scroll-container {
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 10px;
+        width:100%;
+      }
+      
+      div.scroll-container img {
+        padding: 10px;
+        height:300px;
+        width:auto;
+        left: 0;
+        object-fit: cover;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+        animation: scroll 20s linear infinite;;
+      }
+ }
+ 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - CMTM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="icon" href="../images/LOGO_Stone.png" type="image/x-icon">
+</head>
+
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+
+        if(window.scrollY > 0){
+            header.classList.add('scrolled');
+        } else{
+            header.classList.remove('scrolled');
+        }
+    })
+</script>
+
+<body class = "english">
+    <section class = "about-header">
+        <img class = "logo" src = "../images/LOGO_Stone.png" alt = "logo">
+        <nav class = "nav">
+            <ul>
+                <li class = "nav-button"><a href="home.html">Home</a></li>
+                <li class = "about-button"><a href = "about.html">About</a></li>
+                <li class = "contact-button"><a href = "#" id = "selected">Contact</a></li>
+                <li class = "lang-button"><a href = "../zh/contact.html">中文</a></li>
+            </ul>
+        </nav>
+    </section>
+        <section class = "black-border">
+            <div></div>
+        </section>
+
+        <section class = "intro" id = "offset">
+            <h2 style="padding-top:50px;">Contact</h2>
+        </section>
+
+        <section class = "gray" style = "background-color: #fff">
+            <img src="../images/img039.jpg">
+            <figcaption>
+                <p id = "first">You may reach us at either of these contacts. Please do get connected with us if you are interested in our mission, or wanting to help our cause!</p>
+                <h2 style = "font-size:x-large">Email</h2>
+                <p>info@cmtm-us.org</p>
+                <h2 style = "font-size:x-large">Phone</h2>
+                <p>(925)-505-8646</p>
+            </figcaption>
+        </section>
+    
+    <footer>
+        <p>&copy; Copyright 2024 Christian Ministry Training Mission | 211 Topaz Street Milpitas, CA 95035 | 925-505-8646</p>
+    </footer>
+</body>
