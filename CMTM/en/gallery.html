@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - CMTM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="icon" href="../images/LOGO_Stone.png" type="image/x-icon">
+</head>
+
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+
+        if(window.scrollY > 0){
+            header.classList.add('scrolled');
+        } else{
+            header.classList.remove('scrolled');
+        }
+    });
+
+    function select(category) {
+            var all = document.getElementsByClassName('project');
+            var asia = document.getElementsByClassName('asia');
+            var usa = document.getElementsByClassName('usa');
+            
+            if (category == "all") {
+                for (var i = 0; i < all.length; i++) {
+                    all[i].style.display = "block";
+                }
+            } else if (category == "usa") {
+                for (var i = 0; i < asia.length; i++) {
+                    asia[i].style.display = "none";
+                }
+                for (var i = 0; i < usa.length; i++) {
+                    usa[i].style.display = "block";
+                }
+            } else {
+                for (var i = 0; i < asia.length; i++) {
+                    asia[i].style.display = "block";
+                }
+                for (var i = 0; i < usa.length; i++) {
+                    usa[i].style.display = "none";
+                }
+            }
+        };
+</script>
+
+<body class = "english">
+    <section class = "about-header">
+        <img class = "logo" src = "../images/LOGO_Stone.png" alt = "logo">
+        <nav class = "nav">
+            <ul>
+                <li class = "nav-button"><a href="home.html">Home</a></li>
+                <li class = "about-button"><a href="about.html">About</a></li>
+                <li class = "about-button"><a href = "#" id = "selected">Gallery</a></li>
+                <li class = "contact-button"><a href = "contact.html">Contact</a></li>
+                <li class = "lang-button"><a href = "../zh/about.html">中文</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class = "black-border">
+        <div></div>
+    </section>
+    <div class = "projects">
+        <h2>Gallery</h2>
+        <div class = "buttons">
+            <button id = "colored-button" onclick = "select('all')">All</button>
+            <button id = "transparent-button" onclick = "select('asia')">Asia</button>
+            <button id = "transparent-button" onclick = "select('usa')">USA</button>
+        </div>
+        
+        <div class = "container">
+            <div class = "project personal">
+                <a href = "projects/valentines2024"><img src="../images/projects/valentines2024.jpg" id="post-img"></a>
+                <h3 id = "post-title">Phillipines</h3>
+                <span id = "post-date">2009 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+            </div>
+
+            <div class = "project work">
+                <a href = "projects/cmtm"><img src="../images/projects/cmtm.jpg" id="post-img"></a>
+                <h3 id = "post-title">Ethiopia</h3>
+                <span id = "post-date">Winter 2014 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+            </div>
+
+            <div class = "project work">
+                <a href = "projects/hpe"><img src="../images/projects/hpe.jpg" id="post-img"></a>
+                <h3 id = "post-title">Rwanda</h3>
+                <span id = "post-date">October 1, 2023 <span style = "font-size:x-small;">•</span> Py, Go, HTML, JS</span>
+            </div>
+
+            <div class = "project work">
+                <a href = "projects/research"><img src="../images/projects/research.jpg" id="post-img"></a>
+                <h3 id = "post-title">Mexico</h3>
+                <span id = "post-date">September 19, 2023 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+            </div>
+
+            <div class = "project personal">
+                <a href = "projects/treehacks"><img src="../images/projects/treehacks.jpg" id="post-img"></a>
+                <h3 id = "post-title">Treehacks 2023</h3>
+                <span id = "post-date">Feburary 19, 2023 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+            </div>
+
+            <div class = "project personal">
+                <a href = "projects/old_website"><img src="../images/projects/oldweb.jpg" id="post-img"></a>
+                <h3 id = "post-title">Old Website</h3>
+                <span id = "post-date">September 1, 2021 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+            </div>
+        </div>
+    </div>
+    
+     
+        
+    <footer>
+        <p>&copy; Copyright 2024 Christian Ministry Training Mission | 211 Topaz Street Milpitas, CA 95035 | 925-505-8646</p>
+    </footer>
+</body>

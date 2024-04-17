@@ -275,7 +275,116 @@ div.scroll-container {
     }
   }
 
-/* Style the banner title and description */
+/* Projects Section Formatting */
+
+.projects{
+    margin-left:10%;
+    margin-right:10%;
+    padding-top:100px;
+    text-align: center;
+}
+
+.projects h2{
+    margin-bottom:40px;
+}
+
+.container{
+    justify-content: center;
+    display:flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.projects div{
+    padding: 0 20px 50px 20px;
+}
+
+.projects img{
+    width:275px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: filter .1s ease-in-out;
+    cursor: pointer;
+}
+
+.projects img:hover{
+    filter: brightness(50%);
+}
+
+.post{
+    padding-left:20px; 
+    padding-right:20px; 
+    width: 300px;
+    text-align:left;
+    overflow:hidden;
+}
+
+.project{
+    display:block;
+}
+
+
+
+#post-title{
+    font-size:large;
+    margin-bottom: 10px;
+}
+
+#post-date{
+    color: rgb(207, 207, 207);
+    font-weight:300;
+}
+
+#post-desc{
+    margin-top:10px;
+    line-height: 1.5;
+}
+
+#middle{
+    margin:auto;
+}
+
+
+/* Buttons */
+
+
+.buttons{
+    margin-top:20px;
+}
+#colored-button,#transparent-button{
+    font-family: 'Inter', sans-serif;
+    font-size:large;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+#colored-button:hover,#transparent-button:hover,#colored-button{
+    color:#121212;
+    border: none;
+}
+
+#colored-button{
+    background-image: linear-gradient(to left, rgb(133, 196, 255), rgb(107, 182, 101));
+}
+
+#colored-button:hover,#transparent-button:hover{
+    background: white;
+    transition: background-image .4s,background-color .4s;
+}
+
+#transparent-button{
+    margin-left:2%;
+    color:white;
+    border: 1.6px solid white;
+    background: #121212;
+}
+
+#transparent-button:hover{
+    border: 1.6px solid white; /* This provides animation */
+}
+
 
   /* Mobile styles */
 @media (max-width: 767px) {
@@ -438,10 +547,7 @@ div.scroll-container {
   }
  }
  
- /* Tablet styles */
- @media (min-width: 768px) and (max-width: 991px) {
-    /* Your tablet styles here */
- }
+
  
  /* Desktop styles */
  @media (min-width: 992px) {
