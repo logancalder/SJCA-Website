@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - CMTM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="icon" href="../images/LOGO_Stone.png" type="image/x-icon">
+</head>
+
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+
+        if(window.scrollY > 0){
+            header.classList.add('scrolled');
+        } else{
+            header.classList.remove('scrolled');
+        }
+    });
+
+    function select(category) {
+            var all = document.getElementsByClassName('project');
+            var asia = document.getElementsByClassName('Asia');
+            var africa = document.getElementsByClassName('Africa');
+            var USA = document.getElementsByClassName('USA');
+            
+            if (category == "all") {
+                for (var i = 0; i < all.length; i++) {
+                    all[i].style.display = "block";
+                }
+            } else if (category == "Africa") {
+                for (var i = 0; i < asia.length; i++) {
+                    asia[i].style.display = "none";
+                }
+                for(var i = 0; i < USA.length; i++) {
+                    USA[i].style.display = "none";
+                }
+                for (var i = 0; i < africa.length; i++) {
+                    africa[i].style.display = "block";
+                }
+            } else if (category == "USA") {
+                for (var i = 0; i < asia.length; i++) {
+                    asia[i].style.display = "none";
+                }
+                for (var i = 0; i < africa.length; i++) {
+                    africa[i].style.display = "none";
+                }
+                for (var i = 0; i < USA.length; i++) {
+                    USA[i].style.display = "block";
+                }
+            } else {
+                for (var i = 0; i < africa.length; i++) {
+                    africa[i].style.display = "none";
+                }
+                for (var i = 0; i < USA.length; i++) {
+                    USA[i].style.display = "none";
+                }
+                for (var i = 0; i < asia.length; i++) {
+                    asia[i].style.display = "block";
+                }
+            }
+        };
+
+        function selectButton(button) {
+        // Remove 'selected-button' class from all buttons
+        document.querySelectorAll('.selectable-button').forEach(btn => btn.classList.remove('selected-button'));
+        
+        // Add 'selected-button' class to the clicked button
+        button.classList.add('selected-button');
+    };
+</script>
+
+<body class = "english">
+    <section class = "about-header">
+        <img class = "logo" src = "../images/LOGO_Stone.png" alt = "logo">
+        <nav class = "nav">
+            <ul>
+                <li class = "nav-button"><a href="home.html">首页</a></li>
+                <li class = "about-button"><a href="about.html">关于我们</a></li>
+                <li class = "gallery-button"><a href = "#" id = "selected">画廊</a></li>
+                <li class = "contact-button"><a href = "contact.html">联系</a></li>
+                <li class = "lang-button"><a href = "../en/gallery.html">English</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class = "black-border">
+        <div></div>
+    </section>
+    <div class = "projects">
+        <h2>画廊</h2>
+        <div class = "buttons">
+            <button id = "colored-button" class = "selectable-button selected-button" onclick = "select('all'); selectButton(this)">All</button>
+            <button id = "transparent-button" class = "selectable-button" onclick = "select('Asia'); selectButton(this)">Asia</button>
+            <button id = "transparent-button" class = "selectable-button" onclick = "select('Africa'); selectButton(this)">Africa</button>
+            <button id = "transparent-button" class = "selectable-button" onclick = "select('USA'); selectButton(this)">USA</button>
+        </div>
+        
+        <div class = "container">
+            <div class = "project Asia">
+                <a href = "projects/cmtm"><img src="../images/china/shenyang/cover.png" id="post-img"></a>
+                <h3 id = "post-title">Shenyang, 2000</h3>
+            </div>
+
+            <div class = "project Asia">
+                <a href = "projects/cmtm"><img src="../images/china/liaoning/cover.png" id="post-img"></a>
+                <h3 id = "post-title">Liaoning, 2000</h3>
+            </div>
+
+            <div class = "project Asia">
+                <a href = "trips/ph2009.html"><img src="../images/malaysia_2003/cover.png" id="post-img"></a>
+                <h3 id = "post-title">Malaysia, 2003</h3>
+            </div>
+
+            <div class = "project Asia">
+                <a href = "trips/ph2009.html"><img src="../images/ph_2009/cover.png" id="post-img"></a>
+                <h3 id = "post-title">Phillipines, 2009</h3>
+            </div>
+
+            <div class = "project Asia">
+                <a href = "trips/ph2009.html"><img src="../images/ph_2010/IMG_0978.JPG" id="post-img"></a>
+                <h3 id = "post-title">Phillipines, 2010</h3>
+            </div>
+
+            <div class = "project Asia">
+                <a href = "projects/cmtm"><img src="../images/malaysia/IMG_0988.JPG" id="post-img"></a>
+                <h3 id = "post-title">Malaysia, 2010</h3>
+            </div>
+
+            <div class = "project Africa">
+                <a href = "projects/cmtm"><img src="../images/eth_2011/CIMG2561.jpg" id="post-img"></a>
+                <h3 id = "post-title">Ethiopia, 2011</h3>
+            </div>
+
+            <div class = "project Africa">
+                <a href = "projects/cmtm"><img src="../images/eth_2012/CIMG4345.JPG" id="post-img"></a>
+                <h3 id = "post-title">Ethiopia, 2012</h3>
+            </div>
+
+            <div class = "project Africa">
+                <a href = "projects/cmtm"><img src="../images/eth_2014/DSC00404.JPG" id="post-img"></a>
+                <h3 id = "post-title">Ethiopia, 2014</h3>
+            </div>
+
+            <div class = "project Asia">
+                <a href = "projects/cmtm"><img src="../images/china/sichuan/20141215_廣元_聚會_15.JPG" id="post-img"></a>
+                <h3 id = "post-title">Sichuan, 2014</h3>
+            </div>
+
+            <div class = "project USA">
+                <a href = "projects/cmtm"><img src="../images/san_diego/IMG_7353.jpg" id="post-img"></a>
+                <h3 id = "post-title">San Diego, 2017</h3>
+            </div>
+
+            <div class = "project Asia">
+                <a href = "projects/cmtm"><img src="../images/china/yangzhou/IMG_7317.jpg" id="post-img"></a>
+                <h3 id = "post-title">Yangzhou, 2018</h3>
+            </div>
+
+            <div class = "project Africa">
+                <a href = "projects/cmtm"><img src="../images/eth_2019/20191123_002616.JPG" id="post-img"></a>
+                <h3 id = "post-title">Ethiopia, 2019</h3>
+            </div>
+            
+
+
+        </div>
+    </div>
+        
+    <footer>
+        <p>&copy; Copyright 2024 Christian Ministry Training Mission | 211 Topaz Street Milpitas, CA 95035 | 925-505-8646</p>
+    </footer>
+</body>

@@ -21,97 +21,171 @@
         }
     });
 
+    function toggleNavBar() {
+        var element = document.getElementById("mobile-nav-bar");
+        console.log(element);
+        element.classList.toggle("fade");
+    };
+
+    function selectButton(button) {
+        // Remove 'selected-button' class from all buttons
+        document.querySelectorAll('.selectable-button').forEach(btn => btn.classList.remove('selected-button'));
+        
+        // Add 'selected-button' class to the clicked button
+        button.classList.add('selected-button');
+    };
+
     function select(category) {
             var all = document.getElementsByClassName('project');
-            var asia = document.getElementsByClassName('asia');
-            var usa = document.getElementsByClassName('usa');
+            var asia = document.getElementsByClassName('Asia');
+            var africa = document.getElementsByClassName('Africa');
+            var USA = document.getElementsByClassName('USA');
             
             if (category == "all") {
                 for (var i = 0; i < all.length; i++) {
                     all[i].style.display = "block";
                 }
-            } else if (category == "usa") {
+            } else if (category == "Africa") {
                 for (var i = 0; i < asia.length; i++) {
                     asia[i].style.display = "none";
                 }
-                for (var i = 0; i < usa.length; i++) {
-                    usa[i].style.display = "block";
+                for(var i = 0; i < USA.length; i++) {
+                    USA[i].style.display = "none";
+                }
+                for (var i = 0; i < africa.length; i++) {
+                    africa[i].style.display = "block";
+                }
+            } else if (category == "USA") {
+                for (var i = 0; i < asia.length; i++) {
+                    asia[i].style.display = "none";
+                }
+                for (var i = 0; i < africa.length; i++) {
+                    africa[i].style.display = "none";
+                }
+                for (var i = 0; i < USA.length; i++) {
+                    USA[i].style.display = "block";
                 }
             } else {
+                for (var i = 0; i < africa.length; i++) {
+                    africa[i].style.display = "none";
+                }
+                for (var i = 0; i < USA.length; i++) {
+                    USA[i].style.display = "none";
+                }
                 for (var i = 0; i < asia.length; i++) {
                     asia[i].style.display = "block";
-                }
-                for (var i = 0; i < usa.length; i++) {
-                    usa[i].style.display = "none";
                 }
             }
         };
 </script>
 
 <body class = "english">
-    <section class = "about-header">
+    <div class = "about-header">
         <img class = "logo" src = "../images/LOGO_Stone.png" alt = "logo">
         <nav class = "nav">
             <ul>
                 <li class = "nav-button"><a href="home.html">Home</a></li>
                 <li class = "about-button"><a href="about.html">About</a></li>
-                <li class = "about-button"><a href = "#" id = "selected">Gallery</a></li>
+                <li class = "gallery-button"><a href = "#" id = "selected">Gallery</a></li>
                 <li class = "contact-button"><a href = "contact.html">Contact</a></li>
-                <li class = "lang-button"><a href = "../zh/about.html">中文</a></li>
+                <li class = "lang-button"><a href = "../zh/gallery.html">中文</a></li>
             </ul>
         </nav>
-    </section>
+        <div onclick = "toggleNavBar()" class = "nav-menu-container">
+            <i class="fa-solid fa-bars" id = "nav-menu-button"></i>
+        </div>
+    </div>
+
+    <div id = "mobile-nav-bar">
+        <ul>
+                <li class = "home-button"><a href = "home.html">Home</a></li>
+                <li class = "about-button"><a href = "about.html">About</a></li>
+                <li class = "contact-button"><a href = "contact.html">Contact</a></li>
+                <li class = "lang-button"><a href = "../zh/home.html">中文</a></li>
+        </ul>
+    </div>
     <section class = "black-border">
         <div></div>
     </section>
     <div class = "projects">
         <h2>Gallery</h2>
         <div class = "buttons">
-            <button id = "colored-button" onclick = "select('all')">All</button>
-            <button id = "transparent-button" onclick = "select('asia')">Asia</button>
-            <button id = "transparent-button" onclick = "select('usa')">USA</button>
+            <button id = "colored-button" class = "selectable-button selected-button" onclick = "select('all'); selectButton(this)">All</button>
+            <button id = "transparent-button" class = "selectable-button" onclick = "select('Asia'); selectButton(this)">Asia</button>
+            <button id = "transparent-button" class = "selectable-button" onclick = "select('Africa'); selectButton(this)">Africa</button>
+            <button id = "transparent-button" class = "selectable-button" onclick = "select('USA'); selectButton(this)">USA</button>
         </div>
         
         <div class = "container">
-            <div class = "project personal">
-                <a href = "projects/valentines2024"><img src="../images/projects/valentines2024.jpg" id="post-img"></a>
-                <h3 id = "post-title">Phillipines</h3>
-                <span id = "post-date">2009 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+            <div class = "project Asia">
+                <a href = "trips/shenyang.html"><img src="../images/china/shenyang/cover.png" id="post-img"></a>
+                <h3 id = "post-title">Shenyang, 2000</h3>
             </div>
 
-            <div class = "project work">
-                <a href = "projects/cmtm"><img src="../images/projects/cmtm.jpg" id="post-img"></a>
-                <h3 id = "post-title">Ethiopia</h3>
-                <span id = "post-date">Winter 2014 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+            <div class = "project Asia">
+                <a href = "trips/liaoning.html"><img src="../images/china/liaoning/cover.png" id="post-img"></a>
+                <h3 id = "post-title">Liaoning, 2000</h3>
             </div>
 
-            <div class = "project work">
-                <a href = "projects/hpe"><img src="../images/projects/hpe.jpg" id="post-img"></a>
-                <h3 id = "post-title">Rwanda</h3>
-                <span id = "post-date">October 1, 2023 <span style = "font-size:x-small;">•</span> Py, Go, HTML, JS</span>
+            <div class = "project Asia">
+                <a href = "trips/malaysia.html"><img src="../images/malaysia_2003/cover.png" id="post-img"></a>
+                <h3 id = "post-title">Malaysia, 2003</h3>
             </div>
 
-            <div class = "project work">
-                <a href = "projects/research"><img src="../images/projects/research.jpg" id="post-img"></a>
-                <h3 id = "post-title">Mexico</h3>
-                <span id = "post-date">September 19, 2023 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+            <div class = "project Asia">
+                <a href = "trips/ph2009.html"><img src="../images/ph_2009/cover.png" id="post-img"></a>
+                <h3 id = "post-title">Phillipines, 2009</h3>
             </div>
 
-            <div class = "project personal">
-                <a href = "projects/treehacks"><img src="../images/projects/treehacks.jpg" id="post-img"></a>
-                <h3 id = "post-title">Treehacks 2023</h3>
-                <span id = "post-date">Feburary 19, 2023 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+            <div class = "project Asia">
+                <a href = "trips/ph2010.html"><img src="../images/ph_2010/IMG_0978.JPG" id="post-img"></a>
+                <h3 id = "post-title">Phillipines, 2010</h3>
             </div>
 
-            <div class = "project personal">
-                <a href = "projects/old_website"><img src="../images/projects/oldweb.jpg" id="post-img"></a>
-                <h3 id = "post-title">Old Website</h3>
-                <span id = "post-date">September 1, 2021 <span style = "font-size:x-small;">•</span> HTML, JS</span>
+            <div class = "project Asia">
+                <a href = "trips/mal2010.html"><img src="../images/malaysia/IMG_0988.JPG" id="post-img"></a>
+                <h3 id = "post-title">Malaysia, 2010</h3>
             </div>
+
+            <div class = "project Africa">
+                <a href = "trips/eth2011.html"><img src="../images/eth_2011/CIMG2561.jpg" id="post-img"></a>
+                <h3 id = "post-title">Ethiopia, 2011</h3>
+            </div>
+
+            <div class = "project Africa">
+                <a href = "trips/eth2012.html"><img src="../images/eth_2012/CIMG4345.JPG" id="post-img"></a>
+                <h3 id = "post-title">Ethiopia, 2012</h3>
+            </div>
+
+            <div class = "project Africa">
+                <a href = "trips/eth2014.html"><img src="../images/eth_2014/DSC00404.JPG" id="post-img"></a>
+                <h3 id = "post-title">Ethiopia, 2014</h3>
+            </div>
+
+            <div class = "project Asia">
+                <a href = "trips/sichuan.html"><img src="../images/china/sichuan/20141215_廣元_聚會_15.JPG" id="post-img"></a>
+                <h3 id = "post-title">Sichuan, 2014</h3>
+            </div>
+
+            <div class = "project USA">
+                <a href = "trips/sd.html"><img src="../images/san_diego/IMG_7353.jpg" id="post-img"></a>
+                <h3 id = "post-title">San Diego, 2017</h3>
+            </div>
+
+            <div class = "project Asia">
+                <a href = "trips/yangzhou.html"><img src="../images/china/yangzhou/IMG_7317.jpg" id="post-img"></a>
+                <h3 id = "post-title">Yangzhou, 2018</h3>
+            </div>
+
+            <div class = "project Africa">
+                <a href = "trips/eth2019.html"><img src="../images/eth_2019/20191123_002616.JPG" id="post-img"></a>
+                <h3 id = "post-title">Ethiopia, 2019</h3>
+            </div>
+            
+
+
         </div>
     </div>
-    
-     
         
     <footer>
         <p>&copy; Copyright 2024 Christian Ministry Training Mission | 211 Topaz Street Milpitas, CA 95035 | 925-505-8646</p>

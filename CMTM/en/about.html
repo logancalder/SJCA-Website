@@ -19,21 +19,40 @@
         } else{
             header.classList.remove('scrolled');
         }
-    })
+    });
+
+    function toggleNavBar() {
+        var element = document.getElementById("mobile-nav-bar");
+        console.log(element);
+        element.classList.toggle("fade");
+    };
 </script>
 
 <body class = "english">
-    <section class = "about-header">
+    <div class = "about-header">
         <img class = "logo" src = "../images/LOGO_Stone.png" alt = "logo">
         <nav class = "nav">
             <ul>
                 <li class = "nav-button"><a href="home.html">Home</a></li>
                 <li class = "about-button"><a href = "#" id = "selected">About</a></li>
+                <li class = "gallery-button"><a href = "gallery.html">Gallery</a></li>
                 <li class = "contact-button"><a href = "contact.html">Contact</a></li>
                 <li class = "lang-button"><a href = "../zh/about.html">中文</a></li>
             </ul>
         </nav>
-    </section>
+        <div onclick = "toggleNavBar()" class = "nav-menu-container">
+            <i class="fa-solid fa-bars" id = "nav-menu-button"></i>
+        </div>
+    </div>
+
+    <div id = "mobile-nav-bar">
+        <ul>
+                <li class = "home-button"><a href = "home.html">Home</a></li>
+                <li class = "gallery-button"><a href = "gallery.html">Gallery</a></li>
+                <li class = "contact-button"><a href = "contact.html">Contact</a></li>
+                <li class = "lang-button"><a href = "../zh/home.html">中文</a></li>
+        </ul>
+    </div>
         <section class = "black-border">
             <div></div>
         </section>

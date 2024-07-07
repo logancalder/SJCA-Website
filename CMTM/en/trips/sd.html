@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Diego, 2017 - CMTM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <link rel="stylesheet" type="text/css" href="../../lightbox.css">
+    <link rel="icon" href="../../images/LOGO_Stone.png" type="image/x-icon">
+</head>
+
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+
+        if(window.scrollY > 0){
+            header.classList.add('scrolled');
+        } else{
+            header.classList.remove('scrolled');
+        }
+    });
+
+    function toggleNavBar() {
+        var element = document.getElementById("mobile-nav-bar");
+        console.log(element);
+        element.classList.toggle("fade");
+    };
+
+</script>
+<script src="../../lightbox-plus-jquery.js"></script>
+
+<body class="english">
+    <div class="about-header">
+        <img class="logo" src="../../images/LOGO_Stone.png" alt="logo">
+        <nav class="nav">
+            <ul>
+                <li class="nav-button"><a href="../home.html">Home</a></li>
+                <li class="about-button"><a href="../about.html">About</a></li>
+                <li class="gallery-button"><a href="../gallery.html">Gallery</a></li>
+                <li class="contact-button"><a href="../contact.html">Contact</a></li>
+                <li class="lang-button"><a href="../../zh/gallery.html">中文</a></li>
+            </ul>
+        </nav>
+        <div onclick = "toggleNavBar()" class = "nav-menu-container">
+            <i class="fa-solid fa-bars" id = "nav-menu-button"></i>
+        </div>
+    </div>
+
+    <div id = "mobile-nav-bar">
+        <ul>
+                <li class = "home-button"><a href = "../home.html">Home</a></li>
+                <li class = "about-button"><a href = "../about.html">About</a></li>
+                <li class = "gallery-button"><a href = "../gallery.html">Gallery</a></li>
+                <li class = "contact-button"><a href = "../contact.html">Contact</a></li>
+                <li class = "lang-button"><a href = "../zh/home.html">中文</a></li>
+        </ul>
+    </div>
+    <section class="black-border">
+        <div></div>
+    </section>
+    <div class="mission">
+        <h2>San Diego, 2017</h2>
+        <p>This is tkjwehrl kjehrkwjehr wklejrthwl kjerthlwekjrthlwk ejrthlwkejrt hwelkrjthwerkjtherkjthe rtkjehrtkerjthlwe kjthwlekrjthwlertjk hwlekrjth</p>
+        <div class="container-gal">
+            <div class="gal">
+                <a href="../../images/san_diego/DSCF0605.jpg" data-lightbox="models" class="imagecrop">
+                    <img src="../../images/san_diego/DSCF0605.jpg" id="post-img">
+                </a>
+                
+                <a href="../../images/san_diego/DSCF0626.jpg" data-lightbox="models" class="imagecrop">
+                    <img src="../../images/san_diego/DSCF0626.jpg" id="post-img">
+                </a>
+
+                <a href="../../images/san_diego/DSCF0632.jpg" data-lightbox="models" class="imagecrop">
+                    <img src="../../images/san_diego/DSCF0632.jpg" id="post-img">
+                </a>
+
+                <a href="../../images/san_diego/DSCF0635.jpg" data-lightbox="models" class="imagecrop">
+                    <img src="../../images/san_diego/DSCF0635.jpg" id="post-img">
+                </a>
+
+                <a href="../../images/san_diego/DSCF0639.jpg" data-lightbox="models" class="imagecrop">
+                    <img src="../../images/san_diego/DSCF0639.jpg" id="post-img">
+                </a>
+
+                <a href="../../images/san_diego/DSCF0655.jpg" data-lightbox="models" class="imagecrop">
+                    <img src="../../images/san_diego/DSCF0655.jpg" id="post-img">
+                </a>
+
+                <a href="../../images/san_diego/DSCF0663.jpg" data-lightbox="models" class="imagecrop">
+                    <img src="../../images/san_diego/DSCF0663.jpg" id="post-img">
+                </a>
+
+                <a href="../../images/san_diego/DSCF0664.jpg" data-lightbox="models" class="imagecrop">
+                    <img src="../../images/san_diego/DSCF0664.jpg" id="post-img">
+                </a>
+
+                <a href="../../images/san_diego/DSCF0665.jpg" data-lightbox="models" class="imagecrop">
+                    <img src="../../images/san_diego/DSCF0665.jpg" id="post-img">
+                </a>
+
+                <a href="../../images/san_diego/IMG_20170619_190325.jpg" data-lightbox="models" class="imagecrop">
+                    <img src="../../images/san_diego/IMG_20170619_190325.jpg" id="post-img">
+                </a>
+
+                <a href="../../images/san_diego/IMG_20170620_155107.jpg" data-lightbox="models" class="imagecrop">
+                    <img src="../../images/san_diego/IMG_20170620_155107.jpg" id="post-img">
+                </a>
+
+                <a href="../../images/san_diego/IMG_20170620_194127.jpg" data-lightbox="models" class="imagecrop">
+                    <img src="../../images/san_diego/IMG_20170620_194127.jpg" id="post-img">
+                </a>
+                
+        </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Copyright 2024 Christian Ministry Training Mission | 211 Topaz Street Milpitas, CA 95035 |
+            925-505-8646</p>
+    </footer>
+</body>

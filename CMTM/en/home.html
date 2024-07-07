@@ -19,21 +19,40 @@
         } else{
             header.classList.remove('scrolled');
         }
-    })
+    });
+
+    function toggleNavBar() {
+        var element = document.getElementById("mobile-nav-bar");
+        console.log(element);
+        element.classList.toggle("fade");
+    };
 </script>
 
 <body class = "english">
-    <section class = "header">
+    <div class = "header">
         <img class = "logo" src = "../images/LOGO_Stone.png" alt = "logo">
         <nav class = "nav">
             <ul>
                 <li class = "nav-button"><a href="#" id = "selected">Home</a></li>
                 <li class = "about-button"><a href = "about.html">About</a></li>
+                <li class = "gallery-button"><a href = "gallery.html">Gallery</a></li>
                 <li class = "contact-button"><a href = "contact.html">Contact</a></li>
                 <li class = "lang-button"><a href = "../zh/home.html">中文</a></li>
             </ul>
         </nav>
-    </section>
+        <div onclick = "toggleNavBar()" class = "nav-menu-container">
+            <i class="fa-solid fa-bars" id = "nav-menu-button"></i>
+        </div>
+    </div>
+
+    <div id = "mobile-nav-bar">
+        <ul>
+                <li class = "about-button"><a href = "about.html">About</a></li>
+                <li class = "gallery-button"><a href = "gallery.html">Gallery</a></li>
+                <li class = "contact-button"><a href = "contact.html">Contact</a></li>
+                <li class = "lang-button"><a href = "../zh/home.html">中文</a></li>
+        </ul>
+    </div>
     
     <section class = "banner">
         <div class = "banner-content">
@@ -42,7 +61,7 @@
         </div>
     </section>
     
-        <section class = "intro">
+        <section class = "intro" style="background-color: #eeeeee;">
             <h2>Sharing The Gospel & God's Love</h2>
             <p class = "medium" style = "font-family: 'Brush Script MT', cursive; font-size:35px; letter-spacing: 1px;"><i>Spread The Lord's word across the Earth.</i></p>
             <p>“My command is this: Love each other as I have loved you. Greater love has no one than this: to lay down one’s life for one’s friends.”</p>
@@ -51,17 +70,17 @@
 
         <div class="scroll-container">
             <!-- Crop to be same as prior -->
-            <img src="../images/img037.jpg"> 
-            <img src="../images/img030.jpg">
-            <img src="../images/img031.jpg">
-            <img src="../images/img034.jpg">
-            <img src="../images/img037.jpg"> 
-            <img src="../images/img030.jpg">
-            <img src="../images/img031.jpg">
-            <img src="../images/img034.jpg">
+            <img src="../images/ph_2009/img037.jpg"> 
+            <img src="../images/ph_2009/img030.jpg">
+            <img src="../images/ph_2009/img031.jpg">
+            <img src="../images/ph_2009/img034.jpg">
+            <img src="../images/ph_2009/img037.jpg"> 
+            <img src="../images/ph_2009/img030.jpg">
+            <img src="../images/ph_2009/img031.jpg">
+            <img src="../images/ph_2009/img034.jpg">
           </div>
         <section class = "gray">
-            <img src="../images/img032.jpg">
+            <img src="../images/ph_2009/img032.jpg">
             <figcaption>
                 <h2>About Us</h2>
                 <p>Christian Ministry Training Mission <i>(CMTM)</i> was established in 2004. The mission of the CMTM is to cultivate and train suitable Christian ministers to spread the Gospel, establish and pastor churches, and bring the Kingdom of God to every place.<br><br>We aim to fight the rising crisis of the decline in church population by maintaining in-touch ministry staff, and a spreading deeper understanding of fundamental beliefs.
@@ -70,13 +89,13 @@
         </section>
         
         <section class = "white">
-            <img src="../images/img035.jpg">
+            <img src="../images/ph_2009/img035.jpg">
             <figcaption>
                 <h2>Our Misson</h2>
                 <p>
-                1. Train missionaries in China, the Philippines, Malaysia, Taiwan, Ethiopia, and more to spread the gospel to areas where it has not been well received.<br><br>
-                2. When the number of believers has stabilized, we support and train evangelists to establish churches.<br><br>
-                3. After the establishment of the church, we emphasized the continuous training of the ministry personnel so that the church could continue to build up healthy generations.
+                We aim to train missionaries in China, the Philippines, Malaysia, Taiwan, Ethiopia, and more to spread the gospel to areas where it has not been well received.<br><br>
+                When the number of believers has stabilized, we support and train evangelists to establish churches.<br><br>
+                After the establishment of the church, we emphasized the continuous training of the ministry personnel so that the church could continue to build up healthy generations.
             </p>
             </figcaption>
         </section>
