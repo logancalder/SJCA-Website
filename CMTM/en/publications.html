@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <script src="https://kit.fontawesome.com/92c2b5b560.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - CMTM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="icon" href="../images/LOGO_Stone.png" type="image/x-icon">
+</head>
+
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+
+        if(window.scrollY > 0){
+            header.classList.add('scrolled');
+        } else{
+            header.classList.remove('scrolled');
+        }
+    });
+
+    function toggleNavBar() {
+        var element = document.getElementById("mobile-nav-bar");
+        console.log(element);
+        element.classList.toggle("fade");
+    };
+</script>
+
+<body class = "english">
+    <div class = "header">
+        <img class = "logo" src = "../images/LOGO_Stone.png" alt = "logo">
+        <nav class = "nav">
+            <ul>
+                <li class = "nav-button"><a href="home.html">Home</a></li>
+                <li class = "about-button"><a href = "about.html">About</a></li>
+                <li class = "gallery-button"><a href = "gallery.html">Gallery</a></li>
+                <li class = "pub-button"><a href = "#" id = "selected">Publications</a></li>
+                <li class = "contact-button"><a href = "contact.html">Contact</a></li>
+                <li class = "lang-button"><a href = "../zh/home.html">中文</a></li>
+            </ul>
+        </nav>
+        <div onclick = "toggleNavBar()" class = "nav-menu-container">
+            <i class="fa-solid fa-bars" id = "nav-menu-button"></i>
+        </div>
+    </div>
+
+    <div id = "mobile-nav-bar">
+        <ul>
+                <li class = "nav-button"><a href="home.html">Home</a></li>
+                <li class = "about-button"><a href = "about.html">About</a></li>
+                <li class = "gallery-button"><a href = "gallery.html">Gallery</a></li>
+                <li class = "contact-button"><a href = "contact.html">Contact</a></li>
+                <li class = "lang-button"><a href = "../zh/home.html">中文</a></li>
+        </ul>
+    </div>
+
+    <section class = "black-border">
+        <div></div>
+    </section>
+
+    <section class = "intro" id = "offset">
+        <h2 style="padding-top:50px;">Publications</h2>
+    </section>
+
+    <section class = "gray">
+        <img src="../images/tempimg.png">
+        <figcaption>
+            <h2>Federal Negarit Gazeta</h2>
+            <p>Dkjahfa ksfhakjdfhak sjdfhaskjhdfh askjdfhghask jfhgakfjhsagdfkjshdfgsjadk fgsadkfjhsgdfjhsdg fs fgsdfjh sfjsdhfgskadfhj akj dfgasdkfjhag dfkhasdiughaogi wakjghg jhg kj</p>
+            <p>dasdasd ad asd asd asd asfds fadfa sdf dasdas</p>
+            <p>You may read this publication <a href = "">here</a>.</p>
+        </figcaption>
+    </section>
+    
+    <section class = "white">
+        <img src="../images/tempimg.png">
+        <figcaption>
+            <h2>Federal Negarit Gazeta</h2>
+            <p>Dkjahfa ksfhakjdfhak sjdfhaskjhdfh askjdfhghask jfhgakfjhsagdfkjshdfgsjadk fgsadkfjhsgdfjhsdg fs fgsdfjh sfjsdhfgskadfhj akj dfgasdkfjhag dfkhasdiughaogi wakjghg jhg kj</p>
+            <p>dasdasd ad asd asd asd asfds fadfa sdf dasdas</p>
+            <p>You may read this publication <a href = "">here</a>.</p>
+        </figcaption>
+    </section>
+
+    <section class = "gray">
+        <img src="../images/tempimg.png">
+        <figcaption>
+            <h2>Federal Negarit Gazeta</h2>
+            <p>Dkjahfa ksfhakjdfhak sjdfhaskjhdfh askjdfhghask jfhgakfjhsagdfkjshdfgsjadk fgsadkfjhsgdfjhsdg fs fgsdfjh sfjsdhfgskadfhj akj dfgasdkfjhag dfkhasdiughaogi wakjghg jhg kj</p>
+            <p>dasdasd ad asd asd asd asfds fadfa sdf dasdas</p>
+            <p>You may read this publication <a href = "">here</a>.</p>
+        </figcaption>
+    </section>
+    
+    <section class = "white">
+        <img src="../images/tempimg.png">
+        <figcaption>
+            <h2>Federal Negarit Gazeta</h2>
+            <p>Dkjahfa ksfhakjdfhak sjdfhaskjhdfh askjdfhghask jfhgakfjhsagdfkjshdfgsjadk fgsadkfjhsgdfjhsdg fs fgsdfjh sfjsdhfgskadfhj akj dfgasdkfjhag dfkhasdiughaogi wakjghg jhg kj</p>
+            <p>dasdasd ad asd asd asd asfds fadfa sdf dasdas</p>
+            <p>You may read this publication <a href = "">here</a>.</p>
+        </figcaption>
+    </section>
+    
+    <footer>
+        <p>&copy; Copyright 2024 Christian Ministry Training Mission | 211 Topaz Street Milpitas, CA 95035 | 925-505-8646</p>
+    </footer>
+</body>

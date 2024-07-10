@@ -93,7 +93,7 @@ body {
     text-decoration:none;
 }
 
-.nav-button a:hover, .lang-button a:hover, .about-button a:hover, .contact-button a:hover, .gallery-button a:hover{
+.nav-button a:hover, .lang-button a:hover, .about-button a:hover, .contact-button a:hover, .gallery-button a:hover, .pub-button a:hover{
     transition: all .5s ease 0s;
     color:rgb(255, 221, 148);
 }
